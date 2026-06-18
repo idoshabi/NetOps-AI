@@ -1,0 +1,4 @@
+# Covered by root .gitignore — kept for tools that only read this folder
+node_modules/
+dist/
+.vercel/
