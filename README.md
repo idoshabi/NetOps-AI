@@ -1,4 +1,9 @@
 # NetGov — Network Discovery, Graph, LLM Intelligence & Subnet Governance
+2 Demos, showing diffrent type of UI style and layout:
+
+https://netgraph-copilot.vercel.app/
+https://netops-ai.vercel.app/
+
 
 NetGov is an enterprise MVP that **discovers network assets, builds a real-time network
 graph, answers questions in natural language, detects risk, validates subnet requests,
