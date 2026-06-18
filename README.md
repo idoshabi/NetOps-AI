@@ -1,6 +1,6 @@
 # NetOps-AI — Network Discovery, Graph, LLM Intelligence & Subnet Governance
 
-Two demos showing different UI styles and layouts:
+Two demos (uploaded to Vercel for easy access) that showing different UI concepts and styles:
 
 https://netgraph-copilot.vercel.app/
 
