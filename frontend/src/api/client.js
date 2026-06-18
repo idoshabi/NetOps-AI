@@ -1,17 +1,20 @@
-// Thin API client for the NetGraph Copilot backend.
+// Thin API client for the NetOps-AI backend.
 // In dev, Vite proxies /api -> http://localhost:8000 (see vite.config.js).
 const BASE = import.meta.env.VITE_API_BASE || '/api'
+
+const LS_ACTOR = 'netops-ai.actor'
+const LS_ROLE = 'netops-ai.role'
 
 // Mock auth: the active role is stored in localStorage and sent as X-Role.
 export function getIdentity() {
   return {
-    actor: localStorage.getItem('netgov.actor') || 'demo-user',
-    role: localStorage.getItem('netgov.role') || 'admin',
+    actor: localStorage.getItem(LS_ACTOR) || localStorage.getItem('netgov.actor') || 'demo-user',
+    role: localStorage.getItem(LS_ROLE) || localStorage.getItem('netgov.role') || 'admin',
   }
 }
 export function setIdentity({ actor, role }) {
-  if (actor) localStorage.setItem('netgov.actor', actor)
-  if (role) localStorage.setItem('netgov.role', role)
+  if (actor) localStorage.setItem(LS_ACTOR, actor)
+  if (role) localStorage.setItem(LS_ROLE, role)
 }
 
 async function request(path, { method = 'GET', body } = {}) {

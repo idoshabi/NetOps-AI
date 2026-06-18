@@ -1,6 +1,6 @@
-# NetGov — Architecture
+# NetOps-AI — Architecture
 
-NetGov is an enterprise platform that discovers network assets, builds a real-time
+NetOps-AI is an enterprise platform that discovers network assets, builds a real-time
 network graph, answers natural-language questions about the network, validates subnet
 and infrastructure requests against policy, and generates **safe Infrastructure-as-Code
 pull-request proposals that always require human approval**.
@@ -50,7 +50,7 @@ Subnet request ─▶ Policy engine ─▶ (denied? explain + alternative)
             IaC / PR generator  ─▶  Terraform diff + PR proposal (status: open)
                        │
                        ▼
-            Human reviewer approves/merges (NetGov never self-merges)
+            Human reviewer approves/merges (NetOps-AI never self-merges)
                        │
                        ▼
                   Audit log (full trace)
@@ -104,7 +104,7 @@ backend/app/
 - **Read-only discovery.** Collectors never mutate source systems.
 - **Policy is the gate.** No request reaches PR generation without passing the engine,
   and the LLM cannot bypass it.
-- **Human-in-the-loop.** The LLM proposes; humans approve and merge. NetGov never
+- **Human-in-the-loop.** The LLM proposes; humans approve and merge. NetOps-AI never
   approves its own PR, merges, or deploys.
 - **Everything is audited.** Discovery, policy evaluations, approvals, PRs and every
   LLM action are written to an append-only log with the data sources used.

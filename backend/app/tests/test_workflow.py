@@ -51,7 +51,7 @@ def test_pr_generation_after_approval(db):
     svc.add_approval(db, req.id, approver="Sam", role="network_admin")
     req = db.get(SubnetRequest, req.id)
     pr = pr_generator.generate_pr(db, req, actor="sam", role="network_admin")
-    assert pr.branch.startswith("netgov/subnet/")
+    assert pr.branch.startswith("netops-ai/subnet/")
     assert "aws_subnet" in pr.terraform_diff
     assert pr.audit_event_id
     assert db.get(SubnetRequest, req.id).status == "pr_generated"

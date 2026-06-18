@@ -7,7 +7,7 @@ NET = {"X-Role": "network_admin", "X-Actor": "sam"}
 
 def test_root_and_health(client):
     assert client.get("/health").json()["status"] == "ok"
-    assert client.get("/").json()["name"] == "NetGraph Copilot"
+    assert client.get("/").json()["name"] == "NetOps-AI"
 
 
 def test_dashboard_counts(client):

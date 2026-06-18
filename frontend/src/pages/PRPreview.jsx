@@ -55,7 +55,7 @@ export default function PRPreview() {
       <Panel title="Test plan"><pre style={{ whiteSpace: 'pre-wrap' }}>{pr.test_plan}</pre></Panel>
 
       <Panel title="Approve / reject (human-in-the-loop)">
-        <p className="page-sub" style={{ marginBottom: 10 }}>Acting as <strong>{role}</strong>. NetGraph Copilot never approves or merges its own PRs.</p>
+        <p className="page-sub" style={{ marginBottom: 10 }}>Acting as <strong>{role}</strong>. NetOps-AI never approves or merges its own PRs.</p>
         <div className="row">
           <button className="btn green" disabled={busy || pr.status !== 'open'} onClick={approve}>Approve PR</button>
           <button className="btn red" disabled={busy || pr.status !== 'open'} onClick={reject}>Reject PR</button>

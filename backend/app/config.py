@@ -2,15 +2,15 @@
 import os
 
 class Settings:
-    APP_NAME = "NetGraph Copilot"
+    APP_NAME = "NetOps-AI"
     APP_DESCRIPTION = (
-        "Network graph intelligence platform with LLM copilot for safe subnet governance and IaC."
+        "Network discovery, graph intelligence, LLM copilot, and safe subnet governance."
     )
     VERSION = "0.1.0"
     # SQLite by default; swap DATABASE_URL for PostgreSQL in production.
     DATABASE_URL = os.getenv(
         "DATABASE_URL",
-        "sqlite:////tmp/netgov.db" if os.getenv("VERCEL") else "sqlite:///./netgov.db",
+        "sqlite:////tmp/netops_ai.db" if os.getenv("VERCEL") else "sqlite:///./netops_ai.db",
     )
     # LLM provider: "mock" (default, offline rule-based) | "openai" | "azure" | "anthropic"
     LLM_PROVIDER = os.getenv("LLM_PROVIDER", "mock")

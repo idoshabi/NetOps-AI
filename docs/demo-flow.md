@@ -1,4 +1,4 @@
-# NetGov — Demo Flow
+# NetOps-AI — Demo Flow
 
 A ~5-minute scripted walkthrough that shows discovery → understanding → risk →
 validation → governed change. Start the backend and frontend (see the README), then
@@ -48,7 +48,7 @@ open http://localhost:5173.
 - Once approved, click **Generate Terraform PR**.
 - The **PR Preview** shows title, branch, description, reviewers, the Terraform diff,
   policy summary, rollback plan, test plan, and the audit event id.
-- Approve/Reject the PR as a human — NetGov never self-merges.
+- Approve/Reject the PR as a human — NetOps-AI never self-merges.
 
 ## 9. End-to-end via the assistant (mode 2)
 - Back in **LLM Assistant**, ask: **"Create a new dev subnet for the HR application."**

@@ -28,4 +28,4 @@ def main(reset: bool = True):
 
 
 if __name__ == "__main__":
-    main(reset=os.getenv("NETGOV_RESET", "1") == "1")
+    main(reset=os.getenv("NETOPS_AI_RESET", os.getenv("NETGOV_RESET", "1")) == "1")

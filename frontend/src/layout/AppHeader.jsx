@@ -42,7 +42,7 @@ export default function AppHeader() {
           </div>
           <div>
             <div className="header-title-row">
-              <h1 className="text-gradient">NetGraph Copilot</h1>
+              <h1 className="text-gradient">NetOps-AI</h1>
               <span className="demo-badge">Demo</span>
             </div>
             <p className="header-tagline">Discovery · grounded Q&amp;A · guarded change</p>

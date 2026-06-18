@@ -1,4 +1,4 @@
-# NetGov — API Reference
+# NetOps-AI — API Reference
 
 Base URL (dev): `http://localhost:8000`. Interactive docs at `/docs` (Swagger) and
 `/redoc`. The Vite dev server proxies `/api/*` → backend.

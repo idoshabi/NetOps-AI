@@ -25,7 +25,7 @@ REVIEWER_BY_ROLE = {
 
 def _branch(req: SubnetRequest) -> str:
     slug = re.sub(r"[^a-z0-9]+", "-", f"{req.application}-{req.environment}-{req.requested_cidr}".lower()).strip("-")
-    return f"netgov/subnet/{slug}"
+    return f"netops-ai/subnet/{slug}"
 
 
 def generate_pr(db: Session, req: SubnetRequest, actor: str, role: str) -> PullRequest:
@@ -133,7 +133,7 @@ Risk level: **{policy.get('risk_level', 'low').upper()}**
 {', '.join(policy.get('required_approvals', [])) or 'none'}
 
 > This pull request is an automated **proposal**. It must be reviewed and
-> approved by the required reviewers and merged by a human. NetGov never
+> approved by the required reviewers and merged by a human. NetOps-AI never
 > self-approves, merges, or deploys infrastructure.
 """
 

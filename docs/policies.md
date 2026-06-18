@@ -1,4 +1,4 @@
-# NetGov — Policy Engine
+# NetOps-AI — Policy Engine
 
 The policy engine (`app/policies/engine.py`) is deterministic and pure given the DB
 snapshot. It evaluates a subnet change and returns a structured result.

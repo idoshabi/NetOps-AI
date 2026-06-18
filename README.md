@@ -1,11 +1,11 @@
-# NetGov — Network Discovery, Graph, LLM Intelligence & Subnet Governance
-2 Demos, showing diffrent type of UI style and layout:
+# NetOps-AI — Network Discovery, Graph, LLM Intelligence & Subnet Governance
 
-https://netgraph-copilot.vercel.app/
-https://netops-ai.vercel.app/
+Two demos showing different UI styles and layouts:
 
+- https://netgraph-copilot.vercel.app/
+- https://netops-ai.vercel.app/
 
-NetGov is an enterprise MVP that **discovers network assets, builds a real-time network
+NetOps-AI is an enterprise MVP that **discovers network assets, builds a real-time network
 graph, answers questions in natural language, detects risk, validates subnet requests,
 and lets an LLM generate safe Infrastructure-as-Code pull-request proposals that still
 require human approval.**
@@ -41,7 +41,7 @@ workflow, IaC/PR, LLM assistant, audit, RBAC)  →  Collectors  →  SQLite + in
 ## Project layout
 
 ```
-netgov/
+NetOps-AI/
   backend/      FastAPI + SQLAlchemy + policy/graph/LLM services + pytest
   frontend/     React + Vite multi-page UI
   docs/         architecture, api, policies, llm-assistant, demo-flow
@@ -59,7 +59,7 @@ netgov/
 cd backend
 python -m venv .venv && source .venv/bin/activate    # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-python seed.py            # builds netgov.db and loads mock inventory + demo requests
+python seed.py            # builds netops_ai.db and loads mock inventory + demo requests
 uvicorn app.main:app --reload --port 8000
 ```
 
@@ -90,7 +90,7 @@ pytest             # policy, workflow, assistant, and end-to-end API tests
 
 `python seed.py` drops/recreates the SQLite DB, runs all collectors via the discovery
 service, and seeds four demo subnet requests (overlap-denied, valid, prod-two-approvals,
-internet-needs-security-review). Set `NETGOV_RESET=0` to keep existing data.
+internet-needs-security-review). Set `NETOPS_AI_RESET=0` to keep existing data.
 
 ## Demo script
 
@@ -132,10 +132,20 @@ Copy `backend/.env.example` → `.env` (or export vars):
 
 | Var | Default | Notes |
 |-----|---------|-------|
-| `DATABASE_URL` | `sqlite:///./netgov.db` | Use a PostgreSQL URL in production |
+| `DATABASE_URL` | `sqlite:///./netops_ai.db` | Use a PostgreSQL URL in production |
 | `LLM_PROVIDER` | `mock` | `mock` (offline) / `openai` / `azure` / `anthropic` |
 | `LLM_API_KEY` | — | Required only for a real provider |
 | `CORS_ORIGINS` | localhost:5173 | Comma-separated allowed origins |
+
+## Deploy (Vercel)
+
+Production: https://netops-ai.vercel.app/
+
+```bash
+npx vercel --prod
+```
+
+The repo root `vercel.json` deploys the Vite frontend and FastAPI backend (`/api/*`).
 
 ## Future production integrations
 

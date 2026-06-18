@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Start the NetGov backend (FastAPI) on http://localhost:8000
+# Start the NetOps-AI backend (FastAPI) on http://localhost:8000
 set -e
 cd "$(dirname "$0")/backend"
 python3 -m venv .venv 2>/dev/null || true

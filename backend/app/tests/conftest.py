@@ -29,7 +29,7 @@ def db():
 def client():
     """FastAPI TestClient against a fresh seeded app (uses default sqlite file)."""
     import os
-    os.environ["DATABASE_URL"] = "sqlite:///./netgov_test.db"
+    os.environ["DATABASE_URL"] = "sqlite:///./netops_ai_test.db"
     from fastapi.testclient import TestClient
     from app.db.database import Base, engine
     Base.metadata.drop_all(bind=engine)

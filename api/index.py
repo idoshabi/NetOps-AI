@@ -3,7 +3,7 @@ import sys
 
 # Vercel serverless: writable SQLite lives in /tmp.
 if os.getenv("VERCEL"):
-    os.environ.setdefault("DATABASE_URL", "sqlite:////tmp/netgov.db")
+    os.environ.setdefault("DATABASE_URL", "sqlite:////tmp/netops_ai.db")
     os.environ.setdefault(
         "CORS_ORIGINS",
         "https://frontend-eight-sepia-68takz8tzd.vercel.app,http://localhost:5173",

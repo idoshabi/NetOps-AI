@@ -27,7 +27,7 @@ export default function Dashboard({ embedded = false }) {
       {!embedded && (
         <div className="hero-strip">
           <p>
-            <strong>NetGraph Copilot</strong> maps your network, surfaces risk, and helps you propose safe Terraform changes — always with human approval.
+            <strong>NetOps-AI</strong> maps your network, surfaces risk, and helps you propose safe Terraform changes — always with human approval.
           </p>
         </div>
       )}

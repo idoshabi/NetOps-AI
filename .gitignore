@@ -42,6 +42,8 @@ frontend/.vite/
 *.db
 *.sqlite
 *.sqlite3
+netops_ai.db
+netops_ai_test.db
 netgov.db
 netgov_test.db
 

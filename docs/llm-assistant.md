@@ -1,4 +1,4 @@
-# NetGov — LLM Assistant Service
+# NetOps-AI — LLM Assistant Service
 
 > "Ask the network in natural language, understand ownership and risk, and generate
 > safe Terraform PR proposals with governance built in."

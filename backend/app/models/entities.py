@@ -1,4 +1,4 @@
-"""SQLAlchemy ORM models for the NetGov graph-style data model.
+"""SQLAlchemy ORM models for the NetOps-AI graph-style data model.
 
 The model is relational but mirrors a property graph: every table is a node type
 and foreign keys / association columns are edges. The graph service

@@ -1,4 +1,4 @@
-"""NetGov FastAPI application entrypoint."""
+"""NetOps-AI FastAPI application entrypoint."""
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI

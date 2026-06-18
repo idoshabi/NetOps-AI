@@ -11,7 +11,7 @@ export default function PullRequests({ embedded = false }) {
       {!embedded && (
         <PageHeader
           title="Pull Requests"
-          subtitle="Generated Terraform PR proposals. Every PR requires human approval — NetGraph Copilot never self-merges."
+          subtitle="Generated Terraform PR proposals. Every PR requires human approval — NetOps-AI never self-merges."
         />
       )}
       <ErrorMsg error={error} />

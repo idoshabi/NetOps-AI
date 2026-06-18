@@ -26,7 +26,7 @@ from app.iac import pr_generator
 from app.audit import logger as audit
 
 SAFETY_NOTE = (
-    "This is an automated proposal. NetGov cannot approve, merge, or deploy changes - "
+    "This is an automated proposal. NetOps-AI cannot approve, merge, or deploy changes - "
     "a human reviewer with the required role must do that."
 )
 
