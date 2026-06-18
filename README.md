@@ -2,8 +2,10 @@
 
 Two demos showing different UI styles and layouts:
 
-- https://netgraph-copilot.vercel.app/
-- https://netops-ai.vercel.app/
+https://netgraph-copilot.vercel.app/
+
+https://netops-ai.vercel.app/
+
 
 NetOps-AI is an enterprise MVP that **discovers network assets, builds a real-time network
 graph, answers questions in natural language, detects risk, validates subnet requests,
